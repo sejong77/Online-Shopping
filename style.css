@@ -11,7 +11,8 @@
 	--base-space: 8px;
 	--size-button: 60px;
 	--size-border: 5px;
-	--button-font-size: 20px;
+	--size-thumbnail: 50px;
+	--font-size: 20px;
 
 	/* Annimation */
 	--animation-duration: 300ms;
@@ -39,6 +40,8 @@ body {
 /* Buttons */
 .buttons {
 	margin-right: var(--base-space);
+	display: flex;
+	align-items: center;
 }
 
 .btn {
@@ -46,6 +49,7 @@ body {
 	border: none;
 	outline: none;
 	cursor: pointer;
+	margin-right: var(--base-space);
 }
 
 .imgBtn {
@@ -59,7 +63,7 @@ body {
 }
 
 .colorBtn {
-	font-size: var(--button-font-size);
+	font-size: var(--font-size);
 	padding: calc(var(--base-space) * 2);
 	border-radius: var(--size-border);
 }
@@ -74,4 +78,30 @@ body {
 
 .pink {
 	background-color: var(--color-pink);
+}
+
+/* Items */
+.items {
+	width: 60%;
+	height: 60%;
+	list-style: none;
+	padding-left: 0;
+	overflow-y: scroll;
+}
+
+.item {
+	display: flex;
+	align-items: center;
+	background-color: var(--color-white);
+	margin-bottom: var(--base-space);
+}
+
+.item__thumbnail {
+	width: var(--size-thumbnail);
+	height: var(--size-thumbnail);
+}
+
+.item__description {
+	margin-left: var(--base-space);
+	font-size: var(--font-size);
 }
