@@ -94,6 +94,7 @@ body {
 	align-items: center;
 	background-color: var(--color-white);
 	margin-bottom: var(--base-space);
+	padding: var(--base-space);
 }
 
 .item__thumbnail {
