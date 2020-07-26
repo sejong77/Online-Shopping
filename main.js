@@ -21,10 +21,31 @@ function createHTMLString(item) {
   `;
 }
 
+/* 버튼을 클릭 했을 떄 실행되는 함수 */
+function onButtonClick(event, items) {
+	const dataset = event.target.dataset;
+	const key = dataset.key;
+	const value = dataset.value;
+
+	if (key == null || value == null) {
+		return;
+	}
+
+	displayItems(items.filter(item => item[key] === value));
+}
+
+/* setEventListener 함수 */
+function setEventListeners(items) {
+	const logo = document.querySelector('.logo');
+	const buttons = document.querySelector('.buttons');
+	logo.addEventListener('click', () => displayItems(items));
+	buttons.addEventListener('click', event => onButtonClick(event, items));
+}
+
 /* Main */
 loadItems()
 	.then(items => {
 		displayItems(items);
-		//setEventListeners(items);
+		setEventListeners(items);
 	})
 	.catch(console.log);
