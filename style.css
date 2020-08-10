@@ -106,3 +106,14 @@ body {
 	margin-left: var(--base-space);
 	font-size: var(--font-size);
 }
+
+/* Media Query */
+@media screen and (max-width: 650px) {
+	.buttons {
+		flex-direction: column;
+	}
+
+	.imgBtn {
+		margin-bottom: 8px;
+	}
+}
